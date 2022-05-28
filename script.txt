@@ -1,0 +1,12 @@
+banner Welcome to first step of Zero Entry Hacking
+echo "Please insert domain name"
+read a
+echo "\n\n Result IP Resolution by using tool NSLOOKUP" > Report.txt
+nslookup $a >> Report.txt
+echo "\n\n Result of WHOIS" >> Report.txt
+whois $a >> Report.txt
+echo "\n\n Result of Sub Domain by using tool SUBLISTER" >> Report.txt
+sublist3r -d $a >> Report.txt
+echo "\n\n Result of Emails and Subdomain by using tool THEHARVESTER" >> Report.txt
+theHarvester -d $a -l 100 -b google >> Report.txt
+#Over Report can be viewed from file Report
